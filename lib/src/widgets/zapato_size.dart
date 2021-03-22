@@ -109,7 +109,7 @@ class _TallaZapatoCaja extends StatelessWidget {
           '${numero.toString().replaceAll('.0', '')}',
           style: TextStyle(
             color: (this.numero == zapatoModel.talla) ? Colors.white : Color(0xfff1a23a),
-            fontSize: 16.0,
+            fontSize: 15.0,
             fontWeight: FontWeight.bold
           ),
         ),

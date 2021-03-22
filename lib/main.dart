@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_shoes/src/models/zapato_model.dart';
 import 'package:flutter_shoes/src/pages/zapato_desc.dart';
 import 'package:flutter_shoes/src/pages/zapato_page.dart';
@@ -19,6 +20,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    // solo permitir el portrait vertical
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp
+    ]);
+
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shoes App',

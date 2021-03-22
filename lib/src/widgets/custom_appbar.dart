@@ -15,11 +15,11 @@ class CustomAppBar extends StatelessWidget {
       top: true,
       bottom: false,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30.0),
+        padding: EdgeInsets.fromLTRB(30.0,10,30.0,0),
         child: Container(
           // margin: EdgeInsets.only(top: 30.0),
           width: double.infinity,
-          height: 60.0,
+          height: 40.0,
           child: Row(
             children: [
               Text(

@@ -8,6 +8,10 @@ import 'package:flutter_shoes/src/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
 
 class ZapatoDescPage extends StatelessWidget {
+
+  final ScrollController _scrollController = ScrollController();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,22 +36,31 @@ class ZapatoDescPage extends StatelessWidget {
             ],
           ),
 
+          // scroll bar, barra lateral
           Expanded(
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                  ZapatoDescripcion(
-                    titulo: 'Nike Air Max 720',
-                    descripcion: "The Nike Air Max 720 goes bigger than ever before with Nike's taller Air unit yet, offering more air underfoot for unimaginable, all-day comfort. Has Air Max gone too far? We hope so.",
-                  ),
+            child: RawScrollbar(
+              thumbColor: Color(0xffFFc675),
+              thickness: 7.0,
+              isAlwaysShown: true,
+              controller: _scrollController,
+              child: SingleChildScrollView(
+                controller: _scrollController,
+                physics: BouncingScrollPhysics(),
+                child: Column(
+                  children: [
+                    ZapatoDescripcion(
+                      titulo: 'Nike Air Max 720',
+                      descripcion: "The Nike Air Max 720 goes bigger than ever before with Nike's taller Air unit yet, offering more air underfoot for unimaginable, all-day comfort. Has Air Max gone too far? We hope so.",
+                    ),
 
-                  _MontoBuyNow(),
+                    _MontoBuyNow(),
 
-                  _ColoresYMas(),
+                    _ColoresYMas(),
 
-                  _BotonesLikeCartSttings()
+                    _BotonesLikeCartSttings()
 
-                ],
+                  ],
+                ),
               ),
             ),
           )

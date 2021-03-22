@@ -9,19 +9,21 @@ class AgregarCarritoBoton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return SafeArea(  
+      bottom: true,
+      top: false,
       child: Padding(
         padding: EdgeInsets.all(10.0),
         child: Container(
           width: double.infinity,
-          height: 100,
+          height: 80,
           decoration: BoxDecoration(
             color: Colors.grey.withOpacity(0.4),
             borderRadius: BorderRadius.circular(100.0)
           ),
           child: Row(
             children: [
-              SizedBox(width: 20.0,),
+              SizedBox(width: 30.0,),
               Text(
                 '\$$monto',
                 style: TextStyle(

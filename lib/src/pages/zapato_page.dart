@@ -10,8 +10,9 @@ class ZapatoPage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+
           CustomAppBar(texto: "For You",),
-          SizedBox(height: 10.0,),
+          SizedBox(height: 6.0,),
 
           Expanded(
             child: SingleChildScrollView(
